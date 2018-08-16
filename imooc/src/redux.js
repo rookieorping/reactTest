@@ -10,6 +10,9 @@ export function counter(state=0, action) {
             return 10
     }
 }
+
+
+
 export function addGun() {
     return {type: ADD_GUN}
 }
