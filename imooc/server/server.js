@@ -1,12 +1,8 @@
 const express = require('express')
+const userRouter = require('./user')
 //新建app
 const app = express()
-app.get('/', function (req, res) {
-    res.send('<h1>hell world</h1>')
-})
-app.get('/data', function (req,res) {
-    res.json({name: 'shuping', type: 'person'})
-})
+app.use('/user',userRouter)
 app.listen(9093, function () {
     console.log('Node app start at port 9093')
 })
